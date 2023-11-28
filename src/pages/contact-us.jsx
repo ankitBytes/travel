@@ -7,6 +7,9 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 
+// components
+import HeaderComponent from "../components/header-component";
+
 const ContactUsPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -24,13 +27,22 @@ const ContactUsPage = () => {
     <Box
       sx={{
         position: "relative",
-        p: "5rem 0",
       }}
       id="contact-us-section"
     >
+      <HeaderComponent
+        title={"Contacts"}
+        pageLink={"/contact"}
+        pageTitle={"Contacts"}
+      />
       <Container maxWidth="lg">
-        <Stack direction={{ xs: "column-reverse", md: "row" }} spacing={4} justifyContent={'space-around'}>
-          <Box sx={{ mb: 2,maxWidth:'700px' }}>
+        <Stack
+          direction={{ xs: "column-reverse", md: "row" }}
+          spacing={4}
+          justifyContent={"space-around"}
+          sx={{ py: "5rem" }}
+        >
+          <Box sx={{ mb: 2, maxWidth: "700px" }}>
             <Typography variant="h3" sx={{ mb: 5 }}>
               Get in Touch
             </Typography>
@@ -128,7 +140,7 @@ const ContactUsPage = () => {
             direction={{ xs: "column", sm: "row", md: "column" }}
             spacing={3}
             sx={{ minWidth: "18rem" }}
-            justifyContent={'space-between'}
+            justifyContent={"space-between"}
           >
             <Box>
               <Typography variant="h6" sx={{ mb: 1, fontWeight: 500 }}>

@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
 
 import {
   ThemeProvider,
   responsiveFontSizes,
   createTheme,
 } from "@mui/material/styles";
+
+import App from "./App.jsx";
+import "./index.css";
+
 
 let theme = createTheme({
   palette: {
